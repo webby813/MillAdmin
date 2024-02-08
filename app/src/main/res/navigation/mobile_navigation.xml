@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/Nav1">
+
+    <fragment
+        android:id="@+id/Nav1"
+        android:name="com.example.milladmin.home.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_nav1" />
+
+    <fragment
+        android:id="@+id/Nav2"
+        android:name="com.example.milladmin.users.UsersFragment"
+        android:label="User List"
+        tools:layout="@layout/fragment_nav2" />
+
+</navigation>

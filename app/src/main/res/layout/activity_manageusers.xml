@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/mintGreen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:title="Add New User"
+        app:titleTextColor="@android:color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="670dp"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <!-- Username input -->
+        <TextView
+            android:id="@+id/labelUsername"
+            style="@style/InputLabelStyle"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:text="Username" />
+
+        <EditText
+            android:id="@+id/updateUsername"
+            android:background="@drawable/et_style"
+            style="@style/InputEditTextStyle"
+            android:layout_toEndOf="@+id/labelUsername"
+            android:hint="User Name"/>
+
+        <!-- Mill name input-->
+        <TextView
+            android:id="@+id/labelPhonenum"
+            style="@style/InputLabelStyle"
+            android:layout_below="@+id/labelUsername"
+            android:layout_alignParentStart="true"
+            android:text="Phone no:"/>
+
+        <EditText
+            android:id="@+id/updateMill"
+            android:background="@drawable/et_style"
+            style="@style/InputEditTextStyle"
+            android:layout_alignBaseline="@id/labelPhonenum"
+            android:layout_below="@+id/updateUsername"
+            android:layout_toEndOf="@+id/labelPhonenum"
+            android:hint="User Phone number"/>
+
+        <!-- Status input-->
+        <TextView
+            android:id="@+id/labelStatus"
+            style="@style/InputLabelStyle"
+            android:layout_below="@+id/labelPhonenum"
+            android:layout_alignParentStart="true"
+            android:text="Status:"/>
+
+        <EditText
+            android:id="@+id/updateStatus"
+            android:background="@drawable/et_style"
+            style="@style/InputEditTextStyle"
+            android:layout_alignBaseline="@id/labelStatus"
+            android:layout_below="@+id/labelStatus"
+            android:layout_toEndOf="@+id/labelPhonenum"
+            android:hint="Status"/>
+
+        <!--Steam Pressure(bar):-->
+        <TextView
+            android:id="@+id/labelRole"
+            style="@style/InputLabelStyle"
+            android:layout_below="@id/labelStatus"
+            android:layout_alignParentStart="true"
+            android:text="Role:"/>
+
+        <EditText
+            android:id="@+id/updateRole"
+            android:background="@drawable/et_style"
+            style="@style/InputEditTextStyle"
+            android:layout_alignBaseline="@id/labelRole"
+            android:layout_below="@id/updateStatus"
+            android:layout_toEndOf="@id/labelRole"
+            android:hint="User or Admin"/>
+
+        <!--State-->
+        <TextView
+            android:id="@+id/labelState"
+            style="@style/InputLabelStyle"
+            android:layout_below="@id/labelRole"
+            android:layout_alignParentStart="true"
+            android:text="State:"/>
+
+        <EditText
+            android:id="@+id/updateStmFlow"
+            android:background="@drawable/et_style"
+            style="@style/InputEditTextStyle"
+            android:layout_alignBaseline="@id/labelState"
+            android:layout_below="@id/updateRole"
+            android:layout_toEndOf="@id/labelState"
+            android:hint="1 or 2"/>
+
+        <!--Steam Flow-->
+        <TextView
+            android:id="@+id/labelStmFlow"
+            style="@style/InputLabelStyle"
+            android:layout_below="@id/labelState"
+            android:layout_alignParentStart="true"
+            android:text="Steam flow(T/H):"/>
+
+        <EditText
+            android:id="@+id/updateStmFlowUser"
+            android:background="@drawable/et_style"
+            style="@style/InputEditTextStyle"
+            android:layout_alignBaseline="@id/labelStmFlow"
+            android:layout_below="@id/updateStmFlow"
+            android:layout_toEndOf="@id/labelWtrLevelUser"
+            android:hint="20"/>
+
+        <!--Water Level-->
+        <TextView
+            android:id="@+id/labelWtrLevelUser"
+            style="@style/InputLabelStyle"
+            android:layout_below="@id/labelStmFlow"
+            android:layout_alignParentStart="true"
+            android:text="Water Level (%):"/>
+
+        <EditText
+            android:id="@+id/updateWtrLevel"
+            android:background="@drawable/et_style"
+            style="@style/InputEditTextStyle"
+            android:layout_alignBaseline="@id/labelWtrLevelUser"
+            android:layout_below="@id/updateStmFlow"
+            android:layout_toEndOf="@id/labelWtrLevelUser"
+            android:hint="20"/>
+
+        <!--Power Frequency-->
+        <TextView
+            android:id="@+id/labelPwrFq"
+            style="@style/InputLabelStyle"
+            android:layout_below="@id/labelWtrLevelUser"
+            android:layout_alignParentStart="true"
+            android:text="Power Frequency (Hz):"/>
+
+        <EditText
+            android:id="@+id/updatePwrFq"
+            android:background="@drawable/et_style"
+            style="@style/InputEditTextStyle"
+            android:layout_alignBaseline="@id/labelPwrFq"
+            android:layout_below="@id/updateWtrLevel"
+            android:layout_toEndOf="@id/labelPwrFq"
+            android:hint="exp : 20"/>
+
+        <!--Steam Pressure(bar)-->
+        <TextView
+            android:id="@+id/labelStmPress"
+            style="@style/InputLabelStyle"
+            android:layout_below="@id/labelPwrFq"
+            android:layout_alignParentStart="true"
+            android:text="Power Pressure(bar)"/>
+
+        <EditText
+            android:id="@+id/updateStmPressUser"
+            android:background="@drawable/et_style"
+            style="@style/InputEditTextStyle"
+            android:layout_alignBaseline="@id/labelStmPress"
+            android:layout_below="@id/updatePwrFq"
+            android:layout_toEndOf="@id/labelStmPress"
+            android:hint="21"/>
+
+
+        <Button
+            android:id="@+id/button"
+            style="@style/ButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="135dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="540dp"
+            android:layout_marginEnd="135dp"
+            android:layout_marginBottom="40dp"
+            android:text="Update" />
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

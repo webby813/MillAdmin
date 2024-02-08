@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/mintGreen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:title="Add Mill"
+        app:titleTextColor="@android:color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="670dp"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <!-- PiID input -->
+        <TextView
+            android:id="@+id/labelPiID"
+            style="@style/InputLabelStyle"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:text="PiID:" />
+
+        <EditText
+            android:id="@+id/newPiid"
+            android:background="@drawable/et_style"
+            style="@style/InputEditTextStyle"
+            android:layout_toEndOf="@+id/labelPiID"
+            android:hint="Enter PiID"/>
+
+        <!-- Mill name input-->
+        <TextView
+            android:id="@+id/labelMillName"
+            style="@style/InputLabelStyle"
+            android:layout_below="@+id/labelPiID"
+            android:layout_alignParentStart="true"
+            android:text="Mill name:"/>
+
+        <EditText
+            android:id="@+id/newMill"
+            android:background="@drawable/et_style"
+            style="@style/InputEditTextStyle"
+            android:layout_alignBaseline="@id/labelMillName"
+            android:layout_below="@+id/newPiid"
+            android:layout_toEndOf="@+id/labelMillName"
+            android:hint="Enter Mill Name"/>
+
+        <!-- Status input-->
+        <TextView
+            android:id="@+id/labelStatus"
+            style="@style/InputLabelStyle"
+            android:layout_below="@+id/labelMillName"
+            android:layout_alignParentStart="true"
+            android:text="Status:"/>
+
+        <EditText
+            android:id="@+id/newStatus"
+            android:background="@drawable/et_style"
+            style="@style/InputEditTextStyle"
+            android:layout_alignBaseline="@id/labelStatus"
+            android:layout_below="@+id/labelStatus"
+            android:layout_toEndOf="@+id/labelMillName"
+            android:hint="Active or Deactive"/>
+
+        <!--Steam Pressure(bar):-->
+        <TextView
+            android:id="@+id/labelStmPress"
+            style="@style/InputLabelStyle"
+            android:layout_below="@id/labelStatus"
+            android:layout_alignParentStart="true"
+            android:text="Steam Pressure(bar):"/>
+
+        <EditText
+            android:id="@+id/newStmPress"
+            android:background="@drawable/et_style"
+            style="@style/InputEditTextStyle"
+            android:layout_alignBaseline="@id/labelStmPress"
+            android:layout_below="@id/newStatus"
+            android:layout_toEndOf="@id/labelStmPress"
+            android:inputType="number"
+            android:hint="exp : 20"/>
+
+        <!--Steam Flow-->
+        <TextView
+            android:id="@+id/labelStmFlow"
+            style="@style/InputLabelStyle"
+            android:layout_below="@id/labelStmPress"
+            android:layout_alignParentStart="true"
+            android:text="Steam Flow (T/H):"/>
+
+        <EditText
+            android:id="@+id/newStmFlow"
+            android:background="@drawable/et_style"
+            style="@style/InputEditTextStyle"
+            android:layout_alignBaseline="@id/labelStmFlow"
+            android:layout_below="@id/newStmPress"
+            android:layout_toEndOf="@id/labelStmFlow"
+            android:inputType="number"
+            android:hint="exp : 20"/>
+
+        <!--Water Level-->
+        <TextView
+            android:id="@+id/labelWtrLevel"
+            style="@style/InputLabelStyle"
+            android:layout_below="@id/labelStmFlow"
+            android:layout_alignParentStart="true"
+            android:text="Water Level (%):"/>
+
+        <EditText
+            android:id="@+id/newWtrLevel"
+            android:background="@drawable/et_style"
+            style="@style/InputEditTextStyle"
+            android:layout_alignBaseline="@id/labelWtrLevel"
+            android:layout_below="@id/newStmFlow"
+            android:layout_toEndOf="@id/labelWtrLevel"
+            android:inputType="number"
+            android:hint="exp : 20"/>
+
+        <!--Power Frequency-->
+        <TextView
+            android:id="@+id/labelPwrFq"
+            style="@style/InputLabelStyle"
+            android:layout_below="@id/labelWtrLevel"
+            android:layout_alignParentStart="true"
+            android:text="Power Frequency (Hz):"/>
+
+        <EditText
+            android:id="@+id/newPwrFq"
+            android:background="@drawable/et_style"
+            style="@style/InputEditTextStyle"
+            android:layout_alignBaseline="@id/labelPwrFq"
+            android:layout_below="@id/newWtrLevel"
+            android:layout_toEndOf="@id/labelPwrFq"
+            android:inputType="number"
+            android:hint="exp : 20"/>
+
+        <!--Mode-->
+        <TextView
+            android:id="@+id/labelMode"
+            style="@style/InputLabelStyle"
+            android:layout_below="@id/labelPwrFq"
+            android:layout_alignParentStart="true"
+            android:text="Mode :"/>
+
+        <EditText
+            android:id="@+id/newMode"
+            android:background="@drawable/et_style"
+            style="@style/InputEditTextStyle"
+            android:layout_alignBaseline="@+id/labelMode"
+            android:layout_below="@id/newPwrFq"
+            android:layout_toEndOf="@id/labelMode"
+            android:inputType="number"
+            android:hint="1 or 0"/>
+
+        <!--Proxy Port-->
+        <TextView
+            android:id="@+id/labelProxy"
+            style="@style/InputLabelStyle"
+            android:layout_below="@id/labelMode"
+            android:layout_alignParentStart="true"
+            android:text="Proxy Port"/>
+
+        <EditText
+            android:id="@+id/newProxy"
+            android:background="@drawable/et_style"
+            style="@style/InputEditTextStyle"
+            android:layout_alignBaseline="@id/labelProxy"
+            android:layout_below="@id/newMode"
+            android:layout_toEndOf="@id/labelProxy"
+            android:inputType="number"
+            android:hint="4550"/>
+
+        <!--Tunnel Port-->
+        <TextView
+            android:id="@+id/labelTunnel"
+            style="@style/InputLabelStyle"
+            android:layout_below="@+id/labelProxy"
+            android:layout_alignParentStart="true"
+            android:text="Tunnel Port:"/>
+
+        <EditText
+            android:id="@+id/newTunnel"
+            android:background="@drawable/et_style"
+            style="@style/InputEditTextStyle"
+            android:layout_alignBaseline="@id/labelTunnel"
+            android:layout_below="@id/newProxy"
+            android:layout_toEndOf="@id/labelTunnel"
+            android:inputType="number"
+            android:hint="9000"/>
+
+        <Button
+            android:id="@+id/button"
+            style="@style/ButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="135dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="540dp"
+            android:layout_marginEnd="135dp"
+            android:layout_marginBottom="40dp"
+            android:text="Add" />
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

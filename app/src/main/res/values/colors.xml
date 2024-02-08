@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="mintGreen">#FF7FC7D9</color>
+    <color name="lightMintGreen">#FFDCF2F1</color>
+    <color name="positiveActionColor">#FF3CEB1F</color>
+    <color name="appBarColor">#FFC0ACAC</color>
+    <color name="alertRed">#FFFF0101</color>
+    <color name="grey">#FFD9D9D9</color>
+    <color name="deepBlue">#FF365486</color>
+</resources>

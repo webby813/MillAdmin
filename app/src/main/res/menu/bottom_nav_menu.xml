@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/Nav1"
+        android:icon="@drawable/home_icon"
+        android:title="Home" />
+
+    <item
+        android:id="@+id/Nav2"
+        android:icon="@drawable/group_icon"
+        android:title="Users" />
+
+    <item
+        android:id="@+id/Logout"
+        android:icon="@drawable/exit_icon"
+        android:title="Logout" />
+
+</menu>
